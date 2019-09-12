@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" </head> <body>
+</head>
+
+<body>
     <h1 class="text-center">Crystal Collector</h1>
     <br />
     <div class="container">
@@ -44,23 +47,26 @@
         </div>
 
         <br />
-        <div class="row justify-content-center">
-            <!-- Contain the crystals -->
-            <!-- each crystal is a button, need to change the img of the button to a crystal -->
-            <button id="button-1" class="btn btn-primary number buttons "><img src="assets/images/pink-crystal.png"
-                    alt=""></button>
-            <button id="button-2" class="btn btn-primary number buttons "><img src="assets/images/black-crystal.png"
-                    alt=""></button>
-            <button id="button-3" class="btn btn-primary number buttons "><img src="assets/images/green-crystal.png"
-                    alt=""></button>
-            <button id="button-4" class="btn btn-primary number buttons "><img src="assets/images/yellow-crystal.png"
-                    alt=""></button>
-
+        <div id="crystalButton" class="row justify-content-start">
+            <div class="col col-md-1 offset-md-3">
+                    <input class="btn btn-primary" type="reset" value="Reset">
+            </div>
         </div>
     </div>
-
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="assets/javascript/game.js"></script>
-
-    </body>
+    
+</body>
 
 </html>
+<!-- Contain the crystals -->
+<!-- each crystal is a button, need to change the img of the button to a crystal -->
+<!-- <button id="button-1" class="btn btn-primary number buttons "><img src="assets/images/pink-crystal.png"
+        alt=""></button>
+<button id="button-2" class="btn btn-primary number buttons "><img src="assets/images/black-crystal.png"
+        alt=""></button>
+<button id="button-3" class="btn btn-primary number buttons "><img src="assets/images/green-crystal.png"
+        alt=""></button>
+<button id="button-4" class="btn btn-primary number buttons "><img src="assets/images/yellow-crystal.png"
+        alt=""></button> -->
