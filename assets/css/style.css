@@ -1,0 +1,30 @@
+.randomNumber {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(179, 235, 235);
+    height: 200px;
+    border-radius: 50px;
+    padding-top: 75px;
+}
+
+.totalScore {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(223, 121, 113);
+    height: 200px;
+    border-radius: 50px;
+    padding-top: 75px;
+}
+
+.buttons {
+    background-color: white;
+    border-color: white;
+    margin: 1px;
+    padding: 1px;
+}
+
+img {
+    width: 100px;
+
+}
+
