@@ -16,6 +16,8 @@ var losses = 0;
 var randomNumberArray = [];
 //empty target number variable to assign number later
 var targetNumber = "";
+//set state of the game to prevent playing until clicking on the new game button:
+var isFinished = false;
 
 //populate randomNumberArray with random numbers. This can also be used to reset the game and reassign value to crystals. Therefore make this a function to be called upon:
 function reset() {
@@ -25,10 +27,12 @@ function reset() {
     //Random Target number
     //Assign the target number into html
     $("#random").text(targetNumber);
-    //
+    //Assign the counter to html
     $("#total").text(counter);
-    //initialize randomNumberArray to repopulate whenever function reset is called
-    //randomNumberArray = [];
+    //clear away status text
+    $("#statusText").text("")
+    //set state to false so button can be clicked on again
+    isFinished = false;
 }
 
 reset()
@@ -50,34 +54,44 @@ function createCrystals() {
     }
 }
 
+//Call createCrystal function to create crystals
 createCrystals()
 
-// This time, our click event applies to every single crystal on the page. Not just one.
+//Set up click even and retrieve data-crystalValue
 $("#crystals").on("click", ".crystal-image", function () {
 
+    //CHeck to see if the game is already finished. if it is prevent further action.
+    if (isFinished) {
+        return false;
+    }
+
+    //retrieve data-crystalValue
     var crystalValue = ($(this).attr("data-crystalValue"));
     crystalValue = parseInt(crystalValue);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
+
+    //update clicked value to player's counter
     counter += crystalValue;
     $("#total").text(counter);
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
-    
+
+    //Win condition
     if (counter === targetNumber) {
         wins++;
         $("#winCount").text(wins);
         $("#statusText").text("You WON! Click NEW GAME to start a new game!")
-        //reset();
+        //set state to finished
+        isFinished = true;
     }
-    
+    //lose condition
     else if (counter >= targetNumber) {
         losses++;
         $("#lossesCount").text(losses);
         $("#statusText").text("You LOST! Click NEW GAME to start a new game!")
-        //reset();
+        //set state to finished
+        isFinished = true;
     }
 })
 
+//Replace with new crystals and start new game.
 $("#reset").on("click", function () {
     $("#crystals").empty()
     reset();
