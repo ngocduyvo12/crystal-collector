@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -33,8 +34,9 @@
                 <!-- This is where the random number will go -->
                 <h2 id="random">1</h2>
             </div>
-            <div class="resultTally">
+            <div class="resultTally col-md-2 text-center">
                 <!-- Display win and losses counts -->
+                <h5 id="statusText"></h5>
                 <h2>Wins: <span id="winCount">0</span></h2>
                 <h2>Losses: <span id="lossesCount">0</span></h2>
 
@@ -47,9 +49,13 @@
         </div>
 
         <br />
-        <div id="crystals" class="row justify-content-start crystalRow">
+        <div class="row justify-content-start crystalRow">
             <div class="col col-md-1 offset-md-3">
-                    <input class="btn btn-primary" type="reset" value="Reset">
+                    <!-- <input class="btn btn-primary" type="reset" id="reset"> -->
+                    <button id="reset" type="button" class="btn btn-outline-success">New Game</button>
+            </div>
+            <div id="crystals">
+
             </div>
         </div>
     </div>
@@ -60,13 +66,3 @@
 </body>
 
 </html>
-<!-- Contain the crystals -->
-<!-- each crystal is a button, need to change the img of the button to a crystal -->
-<!-- <button id="button-1" class="btn btn-primary number buttons "><img src="assets/images/pink-crystal.png"
-        alt=""></button>
-<button id="button-2" class="btn btn-primary number buttons "><img src="assets/images/black-crystal.png"
-        alt=""></button>
-<button id="button-3" class="btn btn-primary number buttons "><img src="assets/images/green-crystal.png"
-        alt=""></button>
-<button id="button-4" class="btn btn-primary number buttons "><img src="assets/images/yellow-crystal.png"
-        alt=""></button> -->
