@@ -23,7 +23,8 @@ var isFinished = false;
 function reset() {
 
     counter = 0;
-    targetNumber = Math.floor(Math.random() * 50) + 100;
+    //generate new target number between 100 to 130
+    targetNumber = Math.floor(Math.random() * 30) + 100;
     //Random Target number
     //Assign the target number into html
     $("#random").text(targetNumber);
@@ -47,7 +48,7 @@ function createCrystals() {
         //add the src to img. point to imgArray to get pictures from there
         imageCrystal.attr("src", imgArray[i]);
         imageCrystal.attr("id", "crystal-buttons")
-        //assign number grabbed from randomNumberArray to a new element for the img
+        //assign random number from 2 to 12 to data-crystalValue
         imageCrystal.attr("data-crystalValue", Math.floor(Math.random() * 10) + 2);
         //append to html
         $("#crystals").append(imageCrystal);
