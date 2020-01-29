@@ -8,4 +8,4 @@ At the beginning of the game, a random number and a set of crystals are assigned
 
 To win the game, the player have to figure out the value of each crystal and match the number in the red box to the blue box. The number in the red box will increase based on the value of the crystal clicked. 
 
-To start the game again, just **New Game**
+To start the game again, just click **New Game**
