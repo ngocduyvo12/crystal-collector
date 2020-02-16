@@ -74,7 +74,7 @@ $("#crystals").on("click", ".crystal-image", function () {
     counter += crystalValue;
     $("#total").text(counter);
 
-    //Win condition
+    //Win condition will occur when the counter is exactly equal to the target number
     if (counter === targetNumber) {
         wins++;
         $("#winCount").text(wins);
