@@ -82,7 +82,7 @@ $("#crystals").on("click", ".crystal-image", function () {
         //set state to finished
         isFinished = true;
     }
-    //lose condition
+    //lose condition will occur when the counter is larger than the target number
     else if (counter >= targetNumber) {
         losses++;
         $("#lossesCount").text(losses);
