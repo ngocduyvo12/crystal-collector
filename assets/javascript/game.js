@@ -79,7 +79,7 @@ $("#crystals").on("click", ".crystal-image", function () {
         wins++;
         $("#winCount").text(wins);
         $("#statusText").text("You WON! Click NEW GAME to start a new game!")
-        //set state to finished
+        //set state isFinished to true to end the loop
         isFinished = true;
     }
     //lose condition will occur when the counter is larger than the target number
